@@ -7,8 +7,6 @@ import Home from './pages/Home'
 import About from './pages/About'
 import WebDesign from './pages/WebDesign'
 import Fairway from './pages/Fairway'
-import DapperIQ from './pages/DapperIQ'
-import DapperID from './pages/DapperID'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -48,8 +46,6 @@ export default function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services/web-design" element={<WebDesign />} />
               <Route path="/services/fairwaysalessystem" element={<Fairway />} />
-              <Route path="/services/dapper-iq" element={<DapperIQ />} />
-              <Route path="/dapper-id" element={<DapperID />} />
             </Routes>
           </PageWrapper>
         </main>

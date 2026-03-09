@@ -5,8 +5,8 @@ const NAV = [
   { label: 'About', href: '/about' },
   { label: 'Websites', href: '/services/web-design' },
   { label: 'Fairway Sales System™', href: '/services/fairwaysalessystem' },
-  { label: 'Dapper IQ™', href: '/services/dapper-iq' },
-  { label: 'Dapper ID™', href: '/dapper-id' },
+  { label: 'Dapper IQ™', href: 'https://iq.dapperms.com', external: true },
+  { label: 'Dapper ID™', href: 'https://id.dapperms.com', external: true },
 ]
 
 export default function Header() {
@@ -40,16 +40,28 @@ export default function Header() {
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-7">
           {NAV.map(link => {
-            const active = location.pathname === link.href
-            return (
+            const active = !link.external && location.pathname === link.href
+            const style = { color: active ? '#ffcb05' : 'rgba(255,255,255,0.8)', letterSpacing: '0.02em' }
+            const className = "text-sm font-medium transition-colors"
+            return link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+                style={style}
+                onMouseEnter={e => e.target.style.color = '#ffcb05'}
+                onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.8)'}
+              >
+                {link.label}
+              </a>
+            ) : (
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-sm font-medium transition-colors"
-                style={{
-                  color: active ? '#ffcb05' : 'rgba(255,255,255,0.8)',
-                  letterSpacing: '0.02em',
-                }}
+                className={className}
+                style={style}
                 onMouseEnter={e => e.target.style.color = '#ffcb05'}
                 onMouseLeave={e => e.target.style.color = active ? '#ffcb05' : 'rgba(255,255,255,0.8)'}
               >
@@ -84,7 +96,12 @@ export default function Header() {
         style={{ background: '#001a33' }}
       >
         <div className="px-6 py-4 flex flex-col gap-4">
-          {NAV.map(link => (
+          {NAV.map(link => link.external ? (
+            <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer"
+              className="text-white/80 hover:text-white py-1 text-sm font-medium">
+              {link.label}
+            </a>
+          ) : (
             <Link key={link.href} to={link.href}
               className="text-white/80 hover:text-white py-1 text-sm font-medium">
               {link.label}
