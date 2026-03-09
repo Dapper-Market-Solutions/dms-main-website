@@ -57,7 +57,7 @@ const CASE_STUDIES = [
       { value: '2', label: 'Products', period: 'Dapper IQ™ + Dapper ID™' },
     ],
     summary: 'Moke America used Dapper IQ™ to identify high-intent website visitors and Dapper ID™ to build a targeted outbound pipeline — giving their sales team 1,000 warm leads ready for outreach and closing 5+ sales in the very first month.',
-    tags: ['Dapper IQ™', 'Dapper ID™', 'Outbound Outreach', 'Visitor Identification'],
+    tags: ['Dapper IQ™', 'Dapper ID™', 'Outbound Outreach'],
   },
   {
     client: 'Golf Cart World',
