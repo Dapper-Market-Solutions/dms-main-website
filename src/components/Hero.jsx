@@ -3,17 +3,13 @@ export default function Hero() {
     <section
       className="relative min-h-screen flex items-center"
       style={{
-        background: 'linear-gradient(135deg, #001326 0%, #00274c 60%, #003a6e 100%)',
+        backgroundImage: 'url(https://dapperms.com/wp-content/uploads/2023/12/Slider-2.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
-      {/* Subtle grid overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(255,203,5,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,203,5,0.04) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
-        }}
-      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0" style={{ background: 'rgba(0,20,40,0.72)' }} />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
