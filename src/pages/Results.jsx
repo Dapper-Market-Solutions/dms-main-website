@@ -20,7 +20,7 @@ const CASE_STUDIES = [
   {
     client: 'Aura Health and Spa',
     industry: 'Wellness & Medical Aesthetics',
-    service: 'SEO & Digital Strategy',
+    service: 'SEO + Dapper IQ™',
     serviceColor: '#00274c',
     headline: '300%+ Impression Growth in 5 Months',
     stats: [
@@ -28,8 +28,8 @@ const CASE_STUDIES = [
       { value: '↓', label: 'Paid Media Spend', period: 'reduced significantly' },
       { value: '#1', label: 'Local Search', period: 'dominating their market' },
     ],
-    summary: 'Aura Health and Spa was burning budget on paid ads with inconsistent results. We rebuilt their Google presence from the ground up — boosting organic impressions by over 300% in under 5 months while dramatically reducing their dependence on costly paid media.',
-    tags: ['SEO', 'Local Search', 'Google Business'],
+    summary: 'Aura Health and Spa was burning budget on paid ads with inconsistent results. We rebuilt their Google presence from the ground up — boosting organic impressions by over 300% in 5 months. Layering in Dapper IQ™ high-intent consumer data to power their ad targeting took results even further.',
+    tags: ['SEO', 'Local Search', 'Dapper IQ™', 'High-Intent Data'],
   },
   {
     client: 'EverNew Roofing',
@@ -44,6 +44,20 @@ const CASE_STUDIES = [
     ],
     summary: 'EverNew Roofing launched with zero online presence. In 5 months we built them to 16,000+ monthly impressions and 2,600+ users. A targeted display campaign then generated 36 qualified quote requests in only 6 weeks — a strong foundation for long-term growth.',
     tags: ['SEO', 'Display Advertising', 'Lead Generation'],
+  },
+  {
+    client: 'Golf Cart World',
+    industry: 'Golf Cart Dealership',
+    service: 'Fairway Sales System™',
+    serviceColor: '#ffcb05',
+    headline: 'Consistent Pipeline. Year-Round.',
+    stats: [
+      { value: '↑', label: 'Qualified Leads', period: 'month over month' },
+      { value: '↑', label: 'Deals Closed', period: 'from the pipeline' },
+      { value: '↓', label: 'Walk-In Dependency', period: 'systematic lead gen' },
+    ],
+    summary: 'Golf Cart World came to us relying on seasonal foot traffic and hoping the phones would ring. The Fairway Sales System™ gave them a repeatable engine for attracting qualified buyers, nurturing them automatically, and closing deals consistently — even in the off-season.',
+    tags: ['Fairway Sales System™', 'Lead Generation', 'Email Automation'],
   },
   {
     client: 'Medical Supply Company',
@@ -87,34 +101,6 @@ const CASE_STUDIES = [
     summary: 'Pine Haven\'s website was outdated, hard to navigate, and nearly invisible online. Inquiries were rare, and empty rooms were costing thousands each month. Their previous marketing vendor offered little transparency or measurable results. We fixed all of it.',
     tags: ['Website Redesign', 'SEO', 'Lead Generation'],
   },
-  {
-    client: 'Ascendant Personal Injury Experts',
-    industry: 'Legal',
-    service: 'Rebrand + Full Digital Build',
-    serviceColor: '#00274c',
-    headline: 'PPC Campaign Became a Full Rebrand',
-    stats: [
-      { value: '↑', label: 'Brand Authority', period: 'sharp new identity' },
-      { value: '↑', label: 'Case Pipeline', period: 'positioned for growth' },
-      { value: '1', label: 'Vendor', period: 'handling everything' },
-    ],
-    summary: 'What started as a simple PPC campaign evolved into a full rebrand and digital rebuild. Ascendant Personal Injury Experts now has a sharp new identity, a cohesive strategy, and is positioned for major growth in a competitive legal market.',
-    tags: ['Rebrand', 'PPC', 'Website Design'],
-  },
-  {
-    client: 'Ascendant Medical',
-    industry: 'Medical Billing',
-    service: 'Website + SEO Launch',
-    serviceColor: '#00274c',
-    headline: 'Month 1: Already Climbing',
-    stats: [
-      { value: '↑', label: 'Impressions', period: 'sharp rise in month 1' },
-      { value: '↑', label: 'Organic Visits', period: 'from day one' },
-      { value: '↑', label: 'Momentum', period: 'building fast' },
-    ],
-    summary: 'Just one month after launch, Ascendant Medical saw a sharp rise in impressions and organic visits. With a new website and SEO strategy in place, this medical billing company is building the kind of momentum that compounds over time.',
-    tags: ['Website Launch', 'SEO', 'Content Strategy'],
-  },
 ]
 
 export default function Results() {
@@ -133,7 +119,7 @@ export default function Results() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: '8+', label: 'Client Success Stories' },
+              { value: '6+', label: 'Client Success Stories' },
               { value: '300%+', label: 'Max Impression Growth' },
               { value: '2×', label: 'Sales Doubled (Med Supply)' },
               { value: '36', label: 'Quotes in 6 Weeks (Roofing)' },
