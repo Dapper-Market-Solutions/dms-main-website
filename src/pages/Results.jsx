@@ -14,8 +14,8 @@ const CASE_STUDIES = [
       { value: '5', label: 'New Sales', period: 'from the pipeline' },
       { value: '30', label: 'Days', period: 'to see results' },
     ],
-    summary: 'Scott\'s Golf Carts was relying on walk-ins and word of mouth. The Fairway Sales System™ built a predictable pipeline from scratch — attracting qualified buyers, nurturing leads automatically, and generating 24 real opportunities in the first month alone.',
-    tags: ['Lead Generation', 'Email Automation', 'Paid Media'],
+    summary: 'Scott\'s Golf Carts was relying on walk-ins and word of mouth. The Fairway Sales System™ changed that — combining Dapper IQ™ and Dapper ID™ to identify and target high-intent buyers, a built-in CRM to manage the pipeline, and automated email and text sequences that nurture leads without any manual work. 24 qualified opportunities in the first month.',
+    tags: ['Dapper IQ™', 'Dapper ID™', 'CRM', 'Email & SMS Automation'],
   },
   {
     client: 'Aura Health and Spa',
