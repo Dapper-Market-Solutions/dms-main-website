@@ -3,7 +3,7 @@ export default function Hero() {
     <section
       className="relative min-h-screen flex items-center"
       style={{
-        backgroundImage: 'url(https://dapperms.com/wp-content/uploads/2023/12/Slider-2.jpg)',
+        backgroundImage: 'url(https://dapperms.com/wp-content/uploads/gemini-2_5-flash-image_This_is_an_image_of_a_hole_of_Augusta_National_Golf_Course_named_Magnolia__I_nee-2_127857a2-3f3b-434c-b690-760f9d894d3c.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
