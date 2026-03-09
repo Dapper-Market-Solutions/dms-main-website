@@ -60,7 +60,7 @@ const CASE_STUDIES = [
     tags: ['Dapper IQ™', 'Dapper ID™', 'Outbound System Integration'],
   },
   {
-    client: 'Leads on Demand',
+    client: 'Confidential — Insurance Provider',
     industry: 'Insurance Lead Generation',
     service: 'Bulk Lead Supply',
     serviceColor: '#00274c',
@@ -70,8 +70,8 @@ const CASE_STUDIES = [
       { value: '↑', label: 'Customer Satisfaction', period: 'for their clients' },
       { value: 'Bulk', label: 'High-Intent Records', period: 'Universal Life Insurance' },
     ],
-    summary: 'Leads on Demand is an insurance lead generation company that buys in volume — and quality is everything. We supply them with bulk, high-intent consumer records targeting Universal Life Insurance prospects, giving their clients leads that are ready to convert. The result: 2–5× higher conversion rates and measurably better client satisfaction compared to standard lead sources.',
-    tags: ['Dapper IQ™', 'Dapper ID™', 'Bulk Lead Fulfillment', 'Insurance'],
+    summary: 'This insurance lead generation company buys in volume — and quality is everything. We supply them with bulk, high-intent consumer records targeting Universal Life Insurance prospects, giving their clients leads that are ready to convert. Fulfillment runs automatically, with no manual lift required. The result: 2–5× higher conversion rates and measurably better client satisfaction compared to standard lead sources.',
+    tags: ['Dapper IQ™', 'Automated Bulk Lead Fulfillment', 'Insurance'],
   },
   {
     client: 'Golf Cart World',
