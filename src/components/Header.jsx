@@ -24,8 +24,11 @@ export default function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50 transition-shadow duration-300"
-      style={{ background: '#00274c', boxShadow: scrolled ? '0 2px 16px rgba(0,0,0,0.25)' : 'none' }}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        background: scrolled ? '#00274c' : 'transparent',
+        boxShadow: scrolled ? '0 2px 16px rgba(0,0,0,0.25)' : 'none',
+      }}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
