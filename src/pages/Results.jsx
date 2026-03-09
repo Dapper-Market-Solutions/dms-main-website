@@ -20,7 +20,7 @@ const CASE_STUDIES = [
   {
     client: 'Aura Health and Spa',
     industry: 'Wellness & Medical Aesthetics',
-    service: 'SEO + Dapper IQ™',
+    service: 'Website + SEO + Dapper IQ™ + Dapper ID™',
     serviceColor: '#00274c',
     headline: '300%+ Impression Growth in 5 Months',
     stats: [
@@ -28,8 +28,8 @@ const CASE_STUDIES = [
       { value: '↓', label: 'Paid Media Spend', period: 'reduced significantly' },
       { value: '#1', label: 'Local Search', period: 'dominating their market' },
     ],
-    summary: 'Aura Health and Spa was burning budget on paid ads with inconsistent results. We rebuilt their Google presence from the ground up — boosting organic impressions by over 300% in 5 months. Layering in Dapper IQ™ high-intent consumer data to power their ad targeting took results even further.',
-    tags: ['SEO', 'Local Search', 'Dapper IQ™', 'High-Intent Data'],
+    summary: 'Aura Health and Spa was burning budget on paid ads with inconsistent results. We rebuilt their website from scratch, grew their Google presence by 300%+ in 5 months, and layered in Dapper IQ™ and Dapper ID™ high-intent consumer data to power their ad targeting — driving great results across every channel.',
+    tags: ['Website Design', 'SEO', 'Dapper IQ™', 'Dapper ID™'],
   },
   {
     client: 'EverNew Roofing',
