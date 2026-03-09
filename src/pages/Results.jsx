@@ -56,8 +56,8 @@ const CASE_STUDIES = [
       { value: '1,000', label: 'Leads Identified', period: 'via Dapper ID™' },
       { value: '2', label: 'Products', period: 'Dapper IQ™ + Dapper ID™' },
     ],
-    summary: 'Moke America used Dapper IQ™ to identify high-intent website visitors and Dapper ID™ to build a targeted outbound pipeline — giving their sales team 1,000 warm leads ready for outreach and closing 5+ sales in the very first month.',
-    tags: ['Dapper IQ™', 'Dapper ID™', 'Outbound Outreach'],
+    summary: 'Moke America already had a proven outbound sales process. We plugged Dapper IQ™ and Dapper ID™ directly into it — feeding their team 1,000 identified, high-intent leads to work. The result: 5+ sales closed in the very first month, with a full pipeline ready to go.',
+    tags: ['Dapper IQ™', 'Dapper ID™', 'Outbound System Integration'],
   },
   {
     client: 'Golf Cart World',
