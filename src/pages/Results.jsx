@@ -50,13 +50,13 @@ const CASE_STUDIES = [
     industry: 'Golf Cart Dealership',
     service: 'Dapper IQ™ + Dapper ID™',
     serviceColor: '#ffcb05',
-    headline: '5+ Sales in Month One. 1,000 Leads in the Pipeline.',
+    headline: '5+ Sales in the First Week. 1,000 Leads in the Pipeline.',
     stats: [
-      { value: '5+', label: 'Sales Closed', period: 'in the first month' },
+      { value: '5+', label: 'Sales Closed', period: 'in the first week' },
       { value: '1,000', label: 'Leads Identified', period: 'via Dapper ID™' },
       { value: '2', label: 'Products', period: 'Dapper IQ™ + Dapper ID™' },
     ],
-    summary: 'Moke America already had a proven outbound sales process. We plugged Dapper IQ™ and Dapper ID™ directly into it — feeding their team 1,000 identified, high-intent leads to work. The result: 5+ sales closed in the very first month, with a full pipeline ready to go.',
+    summary: 'Moke America already had a proven outbound sales process. We plugged Dapper IQ™ and Dapper ID™ directly into it — feeding their team 1,000 identified, high-intent leads to work. The result: 5+ sales closed in the very first week, with a full pipeline ready to go.',
     tags: ['Dapper IQ™', 'Dapper ID™', 'Outbound System Integration'],
   },
   {
