@@ -85,7 +85,7 @@ const CASE_STUDIES = [
       { value: '14+', label: 'Locations', period: 'unified strategy' },
     ],
     summary: 'With 14+ locations and no cohesive digital strategy, this medical supply brand was leaving significant revenue on the table. We cut through the noise with a unified digital approach that doubled sales and drove 59% more qualified traffic across every location.',
-    tags: ['Multi-Location SEO', 'Paid Media', 'Conversion Optimization'],
+    tags: ['SEO'],
   },
   {
     client: 'Memory Lane Assisted Living',
