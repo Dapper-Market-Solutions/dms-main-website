@@ -1,17 +1,1117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The Only Marketing System Built Specifically for Golf Cart Dealerships. Dapper Market Solutions turns dealerships into sales machines." />
-    <title>Dapper Market Solutions — Built for Golf Cart Dealerships</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dapper Market Solutions — The Unfair Advantage for Growing Businesses</title>
+<meta name="description" content="Dapper Market Solutions builds websites, identifies anonymous visitors, and delivers live buyer intent data. The full-stack growth system for businesses that sell.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2300427c'/><text x='16' y='22' text-anchor='middle' fill='%23ffcb05' font-family='Arial,sans-serif' font-weight='bold' font-size='11'>DMS</text></svg>"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #00427c;
+    --navy-dark: #002a50;
+    --navy-deeper: #001830;
+    --gold: #ffcb05;
+    --gold-dim: #c9a000;
+    --white: #f5f5f0;
+    --off-white: #e8e4d9;
+    --grey: #8a8a8a;
+    --dark: #080d14;
+    --card-bg: #0d1a28;
+    --card-border: rgba(255,203,5,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    background: linear-gradient(to bottom, rgba(8,13,20,0.98), transparent);
+    backdrop-filter: blur(4px);
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .nav-logo span { color: var(--gold); }
+  .nav-logo small {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--grey);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--grey);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--gold) !important;
+    color: var(--dark) !important;
+    padding: 10px 24px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 140px 48px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 70% 50%, rgba(0,66,124,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(255,203,5,0.04) 0%, transparent 50%),
+      linear-gradient(180deg, #080d14 0%, #0a1828 50%, #080d14 100%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,66,124,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,66,124,0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at 60% 40%, black 20%, transparent 70%);
+  }
+
+  .hero-data-lines {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    overflow: hidden;
+    opacity: 0.06;
+  }
+
+  .hero-data-lines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 59px,
+      rgba(0,66,124,0.8) 60px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 59px,
+      rgba(0,66,124,0.8) 60px
+    );
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 1200px; }
+
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.2s;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 7.5vw, 7.5rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    max-width: 860px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.4s;
+  }
+
+  .hero h1 em { font-style: normal; color: var(--gold); }
+
+  .hero-sub {
+    margin-top: 32px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.65;
+    max-width: 560px;
+    color: var(--off-white);
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.6s;
+  }
+
+  .hero-sub strong { font-weight: 600; color: var(--white); }
+
+  .hero-actions {
+    margin-top: 48px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.8s;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--dark);
+    padding: 16px 40px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+
+  .btn-primary:hover { background: #fff; transform: translateY(-2px); }
+
+  .btn-secondary {
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--off-white);
+    padding: 16px 40px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ─── TRUST BAR ─── */
+  .trust-bar {
+    border-top: 1px solid rgba(255,203,5,0.12);
+    border-bottom: 1px solid rgba(255,203,5,0.12);
+    background: rgba(0,66,124,0.08);
+    padding: 28px 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .trust-item {
+    text-align: center;
+    padding: 0 24px;
+    border-right: 1px solid rgba(255,255,255,0.07);
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .trust-item:last-child { border-right: none; }
+  .trust-item:nth-child(1) { animation-delay: 0.1s; }
+  .trust-item:nth-child(2) { animation-delay: 0.2s; }
+  .trust-item:nth-child(3) { animation-delay: 0.3s; }
+  .trust-item:nth-child(4) { animation-delay: 0.4s; }
+
+  .trust-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    display: block;
+  }
+
+  .trust-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: 4px;
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 100px 48px; position: relative; }
+
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+  }
+
+  .section-title em { font-style: normal; color: var(--gold); }
+
+  .section-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--off-white);
+    max-width: 640px;
+  }
+
+  /* ─── SERVICES ─── */
+  .services-section { background: linear-gradient(160deg, var(--dark) 0%, #0a1520 100%); }
+
+  .services-header {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  .services-header .section-body { margin: 0 auto; text-align: center; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  .service-card.visible { opacity: 1; transform: translateY(0); }
+  .service-card:nth-child(2) { transition-delay: 0.12s; }
+  .service-card:nth-child(3) { transition-delay: 0.24s; }
+
+  .service-card:hover {
+    background: rgba(0,42,80,0.6);
+    border-color: rgba(255,203,5,0.2);
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .service-card:hover::before { opacity: 1; }
+
+  .service-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+
+  .service-card p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--grey);
+    margin-bottom: 32px;
+  }
+
+  .service-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s;
+  }
+
+  .service-link:hover { gap: 14px; }
+
+  .service-card-watermark {
+    position: absolute;
+    bottom: -16px;
+    right: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: rgba(255,203,5,0.03);
+    letter-spacing: 0.1em;
+    pointer-events: none;
+  }
+
+  /* ─── PROBLEM SECTION ─── */
+  .problem-section {
+    background: var(--dark);
+  }
+
+  .problem-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .problem-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 32px;
+  }
+
+  .problem-item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .problem-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: rgba(255,203,5,0.12);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 40px;
+  }
+
+  .problem-item h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .problem-item p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--grey);
+  }
+
+  .problem-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .solution-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 28px 32px;
+    position: relative;
+  }
+
+  .solution-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--gold);
+  }
+
+  .solution-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .solution-card h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .solution-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--grey);
+  }
+
+  /* ─── VERTICALS TEASER ─── */
+  .verticals-section {
+    background: linear-gradient(160deg, #0a1520 0%, var(--dark) 100%);
+  }
+
+  .verticals-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .verticals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .vertical-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 32px 28px;
+    cursor: default;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s, background 0.3s;
+  }
+
+  .vertical-card:hover { background: rgba(0,42,80,0.6); border-color: rgba(255,203,5,0.25); }
+  .vertical-card.visible { opacity: 1; transform: translateY(0); }
+  .vertical-card:nth-child(2) { transition-delay: 0.08s; }
+  .vertical-card:nth-child(3) { transition-delay: 0.16s; }
+  .vertical-card:nth-child(4) { transition-delay: 0.24s; }
+  .vertical-card:nth-child(5) { transition-delay: 0.32s; }
+  .vertical-card:nth-child(6) { transition-delay: 0.40s; }
+
+  .vertical-icon { font-size: 1.8rem; margin-bottom: 16px; display: block; }
+
+  .vertical-card h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .vertical-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--grey);
+  }
+
+  .vertical-card p em { font-style: italic; color: var(--gold); }
+
+  .verticals-cta {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  /* ─── GOLF CART SPOTLIGHT ─── */
+  .spotlight-section {
+    background: rgba(0,66,124,0.08);
+    border-top: 1px solid rgba(255,203,5,0.1);
+    border-bottom: 1px solid rgba(255,203,5,0.1);
+    padding: 80px 48px;
+  }
+
+  .spotlight-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .spotlight-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .spotlight-inner h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    line-height: 0.95;
+    margin-bottom: 20px;
+  }
+
+  .spotlight-inner h3 em { font-style: normal; color: var(--gold); }
+
+  .spotlight-inner p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--grey);
+    margin-bottom: 32px;
+  }
+
+  .spotlight-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .spotlight-stat {
+    background: rgba(0,66,124,0.2);
+    border: 1px solid rgba(255,203,5,0.12);
+    padding: 20px;
+  }
+
+  .spotlight-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--gold);
+    display: block;
+  }
+
+  .spotlight-stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+
+  /* ─── CTA ─── */
+  .cta-section {
+    padding: 120px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(0,66,124,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-section .section-eyebrow { display: block; text-align: center; }
+
+  .cta-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.95;
+    margin-bottom: 24px;
+  }
+
+  .cta-section h2 em { font-style: normal; color: var(--gold); display: block; }
+
+  .cta-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--grey);
+    max-width: 520px;
+    margin: 0 auto 48px;
+  }
+
+  .cta-fine {
+    margin-top: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.2);
+    text-transform: uppercase;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 48px 48px 32px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .footer-brand .footer-logo span { color: var(--gold); }
+
+  .footer-brand .footer-tagline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 20px;
+  }
+
+  .footer-brand p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--grey);
+    max-width: 280px;
+  }
+
+  .footer-col h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .footer-col a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.88rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--white); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-copy {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.1em;
+  }
+
+  .footer-contact {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-contact:hover { color: var(--gold); }
+
+  /* ─── REVEAL ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 60px 24px; }
+    .hero { padding: 120px 24px 60px; }
+    .trust-bar { grid-template-columns: repeat(2,1fr); padding: 24px; }
+    .trust-item { border-right: none; padding: 12px 0; }
+    .services-grid, .problem-inner, .verticals-grid, .spotlight-inner, .footer-top { grid-template-columns: 1fr; gap: 24px; }
+    .cta-section { padding: 80px 24px; }
+    footer { padding: 40px 24px 24px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    DAPPER <span>MARKET</span> SOLUTIONS
+    <small>// Growth Intelligence</small>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="https://iq.dapperms.com">Dapper IQ™</a></li>
+    <li><a href="https://id.dapperms.com">Dapper ID™</a></li>
+    <li><a href="/golf-cart-dealerships/">Golf Cart Dealers</a></li>
+    <li><a href="https://bit.ly/dmsinterview" class="nav-cta">Book a Call</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-data-lines"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">// Dapper Market Solutions — Growth Intelligence</div>
+    <h1>YOUR COMPETITORS<br>CAN'T SEE WHAT<br>WE <em>SHOW YOU.</em></h1>
+    <p class="hero-sub">
+      We build the website. We identify who visits it.
+      We deliver <strong>live buyers</strong> before anyone else knows they exist.
+      Three tools. One unfair advantage.
+    </p>
+    <div class="hero-actions">
+      <a href="https://bit.ly/dmsinterview" class="btn-primary">Book a Free Strategy Call →</a>
+      <a href="#services" class="btn-secondary">See What We Do ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <span class="trust-number">280M+</span>
+    <span class="trust-label">Consumer Profiles</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-number">97%</span>
+    <span class="trust-label">Site Visitors Go Unidentified</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-number">7-Day</span>
+    <span class="trust-label">Live Buyer Intent Window</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-number">3-in-1</span>
+    <span class="trust-label">Full-Stack Growth System</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="services-header reveal">
+    <span class="section-eyebrow">// What We Build For You</span>
+    <h2 class="section-title">THREE TOOLS.<br><em>ONE SYSTEM.</em></h2>
+    <p class="section-body">Most agencies do one thing. We built the full stack — from your first digital impression to the moment a buyer walks through your door.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-tag">// 01 — Foundation</span>
+      <span class="service-icon">🌐</span>
+      <h3>WEBSITES & HOSTING</h3>
+      <p>A fast, conversion-focused website is the foundation everything else builds on. We design, build, and host sites that look sharp, load fast, and turn visitors into conversations.</p>
+      <a href="/websites/" class="service-link">Learn More →</a>
+      <div class="service-card-watermark">WEB</div>
+    </div>
+
+    <div class="service-card">
+      <span class="service-tag">// 02 — Identify</span>
+      <span class="service-icon">👁</span>
+      <h3>DAPPER ID™</h3>
+      <p>97% of your website visitors leave without filling out a form. One pixel. Every anonymous visitor identified — name, email, phone — before they bounce.</p>
+      <a href="https://id.dapperms.com" class="service-link">Explore Dapper ID™ →</a>
+      <div class="service-card-watermark">ID</div>
+    </div>
+
+    <div class="service-card">
+      <span class="service-tag">// 03 — Acquire</span>
+      <span class="service-icon">⚡</span>
+      <h3>DAPPER IQ™</h3>
+      <p>Find buyers before they've ever heard of you. We deliver weekly lists of real consumers whose behavior just spiked — the exact moment they entered a buying cycle.</p>
+      <a href="https://iq.dapperms.com" class="service-link">Explore Dapper IQ™ →</a>
+      <div class="service-card-watermark">IQ</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM / WHY DMS -->
+<section class="problem-section">
+  <div class="problem-inner">
+    <div class="reveal">
+      <span class="section-eyebrow">// The Real Problem</span>
+      <h2 class="section-title">MOST BUSINESSES<br>ARE FLYING<br><em>BLIND.</em></h2>
+      <p class="section-body">You have a website. Maybe you run ads. But you still don't know who's looking at you, who's about to buy, or why they're choosing someone else.</p>
+
+      <ul class="problem-list">
+        <li class="problem-item">
+          <div class="problem-num">01</div>
+          <div>
+            <h4>Your Website Leaks Leads</h4>
+            <p>The vast majority of visitors never fill out a form. They check you out and disappear — and you never knew they were there.</p>
+          </div>
+        </li>
+        <li class="problem-item">
+          <div class="problem-num">02</div>
+          <div>
+            <h4>You're Calling the Wrong People</h4>
+            <p>Bought lists are stale. Ad audiences are broad. You're burning budget on people who aren't actively in a buying cycle right now.</p>
+          </div>
+        </li>
+        <li class="problem-item">
+          <div class="problem-num">03</div>
+          <div>
+            <h4>Your Site Doesn't Do Enough Work</h4>
+            <p>A site that doesn't convert or track is an expensive business card. It should be your best salesperson — working 24/7.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="problem-visual reveal">
+      <div class="solution-card">
+        <div class="solution-label">// The Fix → Dapper ID™</div>
+        <h4>See Who's Already On Your Site</h4>
+        <p>Stop guessing who visited. Get names, emails, and phones for every anonymous visitor automatically.</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-label">// The Fix → Dapper IQ™</div>
+        <h4>Find Buyers Before They Find You</h4>
+        <p>Weekly behavioral intent data — real consumers whose activity just spiked in your category. They're shopping. You call first.</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-label">// The Fix → Websites</div>
+        <h4>A Site That Actually Converts</h4>
+        <p>Fast, modern, built to capture. Integrated with Dapper ID™ from day one so you never lose a visitor again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERTICALS -->
+<section class="verticals-section" id="verticals">
+  <div class="verticals-inner">
+    <div class="reveal" style="max-width:700px; margin:0 auto; text-align:center;">
+      <span class="section-eyebrow">// Who We Work With</span>
+      <h2 class="section-title">IF YOUR CUSTOMERS<br>RESEARCH BEFORE<br><em>THEY BUY — WE CAN HELP.</em></h2>
+    </div>
+
+    <div class="verticals-grid">
+      <div class="vertical-card">
+        <span class="vertical-icon">🏌️</span>
+        <h4>Golf Cart Dealerships</h4>
+        <p>Full-system solution built specifically for dealers. Websites, visitor ID, intent data, and a Dapper IQ™ package designed around your sales cycle. <em>We know this vertical cold.</em></p>
+      </div>
+      <div class="vertical-card">
+        <span class="vertical-icon">🛡️</span>
+        <h4>Insurance</h4>
+        <p>Quote shoppers research for days before calling anyone. Know who started shopping this week — by state, product, and income range. <em>You call first.</em></p>
+      </div>
+      <div class="vertical-card">
+        <span class="vertical-icon">🏠</span>
+        <h4>Roofing & Home Services</h4>
+        <p>Storm damage and seasonal demand turn browsers into buyers overnight. Know who just spiked before your competitor's phone rings. <em>First call wins the job.</em></p>
+      </div>
+      <div class="vertical-card">
+        <span class="vertical-icon">💰</span>
+        <h4>Financial Services</h4>
+        <p>High-net-worth individuals research quietly and act fast. Catch them in the 7-day window when their behavior shifts from passive to active. <em>Timing is everything.</em></p>
+      </div>
+      <div class="vertical-card">
+        <span class="vertical-icon">⚖️</span>
+        <h4>Legal & Personal Injury</h4>
+        <p>Someone just got hurt and started searching attorneys. That search spike signals a live case. <em>Get there before the billboards do.</em></p>
+      </div>
+      <div class="vertical-card">
+        <span class="vertical-icon">🏡</span>
+        <h4>Real Estate & Mortgage</h4>
+        <p>Buyers browse for months, then get serious overnight. Rate changes trigger refi spikes. <em>Know who just got serious before they call anyone.</em></p>
+      </div>
+    </div>
+
+    <div class="verticals-cta reveal">
+      <a href="/golf-cart-dealerships/" class="btn-secondary" style="display:inline-block;">See Our Golf Cart Dealer Program →</a>
+    </div>
+  </div>
+</section>
+
+<!-- GOLF CART SPOTLIGHT -->
+<div class="spotlight-section">
+  <div class="spotlight-inner">
+    <div class="reveal">
+      <span class="spotlight-tag">// Featured Vertical</span>
+      <h3>THE ONLY <em>FULL-STACK</em><br>SYSTEM FOR GOLF CART<br>DEALERSHIPS.</h3>
+      <p>We spent years building a marketing system specifically for golf cart dealers — not adapting a generic agency playbook. Your website, your anonymous visitor data, and a weekly feed of local consumers actively shopping golf carts. Together, they change your close rate.</p>
+      <a href="/golf-cart-dealerships/" class="btn-primary">See the Dealer Program →</a>
+    </div>
+
+    <div class="reveal">
+      <div class="spotlight-stats">
+        <div class="spotlight-stat">
+          <span class="spotlight-stat-num">24</span>
+          <span class="spotlight-stat-label">Leads in 30 Days (Scott's Golf Carts)</span>
+        </div>
+        <div class="spotlight-stat">
+          <span class="spotlight-stat-num">97%</span>
+          <span class="spotlight-stat-label">Of Visitors Currently Invisible to You</span>
+        </div>
+        <div class="spotlight-stat">
+          <span class="spotlight-stat-num">7-Day</span>
+          <span class="spotlight-stat-label">Live Buyer Window — Weekly Refresh</span>
+        </div>
+        <div class="spotlight-stat">
+          <span class="spotlight-stat-num">3-in-1</span>
+          <span class="spotlight-stat-label">Website + ID + Intent in One Package</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <span class="section-eyebrow">// The Next Step</span>
+  <h2>LET'S BUILD YOUR<br><em>UNFAIR ADVANTAGE.</em></h2>
+  <p>15 minutes. We'll show you what your site is missing, who's visiting it right now, and who in your market is actively buying — before they call your competitor.</p>
+  <a href="https://bit.ly/dmsinterview" class="btn-primary" style="font-size:1.1rem; padding:20px 56px;">
+    Book a Free Strategy Call →
+  </a>
+  <div class="cta-fine">No pitch deck. No pressure. Just the intel.</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">DAPPER <span>MARKET</span> SOLUTIONS</a>
+      <div class="footer-tagline">// Growth Intelligence</div>
+      <p>We build websites, identify anonymous visitors, and deliver live buyer intent data. The full-stack growth system for businesses that close deals.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="/websites/">Websites & Hosting</a></li>
+        <li><a href="https://id.dapperms.com">Dapper ID™</a></li>
+        <li><a href="https://iq.dapperms.com">Dapper IQ™</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Industries</h5>
+      <ul>
+        <li><a href="/golf-cart-dealerships/">Golf Cart Dealers</a></li>
+        <li><a href="https://iq.dapperms.com#verticals">Insurance</a></li>
+        <li><a href="https://iq.dapperms.com#verticals">Home Services</a></li>
+        <li><a href="https://iq.dapperms.com#verticals">Financial</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="https://bit.ly/dmsinterview">Book a Call</a></li>
+        <li><a href="mailto:deepak@dapperms.com">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 DAPPER MARKET SOLUTIONS LLC</div>
+    <a href="mailto:deepak@dapperms.com" class="footer-contact">deepak@dapperms.com</a>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal, .service-card, .vertical-card').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+</body>
 </html>
