@@ -20,7 +20,7 @@ const CASE_STUDIES = [
   {
     client: 'Aura Health and Spa',
     industry: 'Wellness & Medical Aesthetics',
-    service: 'Website + SEO + Dapper IQ™ + Dapper ID™',
+    service: 'Full Digital Strategy',
     serviceColor: '#00274c',
     headline: '300%+ Impression Growth in 5 Months',
     stats: [
