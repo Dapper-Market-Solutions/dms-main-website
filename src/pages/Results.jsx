@@ -76,7 +76,7 @@ const CASE_STUDIES = [
   {
     client: 'Medical Supply Company',
     industry: 'Medical Supply (14+ Locations)',
-    service: 'Full Digital Strategy',
+    service: 'SEO',
     serviceColor: '#00274c',
     headline: '2× Sales Increase Across 14 Locations',
     stats: [
