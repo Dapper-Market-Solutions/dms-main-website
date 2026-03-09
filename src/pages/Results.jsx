@@ -60,6 +60,20 @@ const CASE_STUDIES = [
     tags: ['Dapper IQ™', 'Dapper ID™', 'Outbound System Integration'],
   },
   {
+    client: 'Leads on Demand',
+    industry: 'Insurance Lead Generation',
+    service: 'Bulk Lead Supply',
+    serviceColor: '#00274c',
+    headline: 'High-Intent Bulk Leads That Actually Convert.',
+    stats: [
+      { value: '2–5×', label: 'Client Conversion Rate', period: 'vs. standard leads' },
+      { value: '↑', label: 'Customer Satisfaction', period: 'for their clients' },
+      { value: 'Bulk', label: 'High-Intent Records', period: 'Universal Life Insurance' },
+    ],
+    summary: 'Leads on Demand is an insurance lead generation company that buys in volume — and quality is everything. We supply them with bulk, high-intent consumer records targeting Universal Life Insurance prospects, giving their clients leads that are ready to convert. The result: 2–5× higher conversion rates and measurably better client satisfaction compared to standard lead sources.',
+    tags: ['Dapper IQ™', 'Dapper ID™', 'Bulk Lead Fulfillment', 'Insurance'],
+  },
+  {
     client: 'Golf Cart World',
     industry: 'Golf Cart Dealership',
     service: 'Fairway Sales System™',
@@ -133,7 +147,7 @@ export default function Results() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: '7+', label: 'Client Success Stories' },
+              { value: '8+', label: 'Client Success Stories' },
               { value: '300%+', label: 'Max Impression Growth' },
               { value: '2×', label: 'Sales Doubled (Med Supply)' },
               { value: '36', label: 'Quotes in 6 Weeks (Roofing)' },
