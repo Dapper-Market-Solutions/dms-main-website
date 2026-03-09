@@ -48,16 +48,16 @@ const CASE_STUDIES = [
   {
     client: 'Moke America — Virginia Beach',
     industry: 'Golf Cart Dealership',
-    service: 'Fairway Sales System™ + Dapper ID™',
+    service: 'Dapper IQ™ + Dapper ID™',
     serviceColor: '#ffcb05',
     headline: '5+ Sales in Month One. 1,000 Leads in the Pipeline.',
     stats: [
       { value: '5+', label: 'Sales Closed', period: 'in the first month' },
       { value: '1,000', label: 'Leads Identified', period: 'via Dapper ID™' },
-      { value: '2', label: 'Products', period: 'Fairway + Dapper ID™' },
+      { value: '2', label: 'Products', period: 'Dapper IQ™ + Dapper ID™' },
     ],
-    summary: 'Moke America hit the ground running — closing 5+ sales in their very first month with the Fairway Sales System™. We then layered in Dapper ID™ and Dapper IQ™ to identify high-intent website visitors and build a targeted outbound pipeline, giving their sales team 1,000 warm leads ready for outreach.',
-    tags: ['Fairway Sales System™', 'Dapper ID™', 'Dapper IQ™', 'Outbound Outreach'],
+    summary: 'Moke America used Dapper IQ™ to identify high-intent website visitors and Dapper ID™ to build a targeted outbound pipeline — giving their sales team 1,000 warm leads ready for outreach and closing 5+ sales in the very first month.',
+    tags: ['Dapper IQ™', 'Dapper ID™', 'Outbound Outreach', 'Visitor Identification'],
   },
   {
     client: 'Golf Cart World',
