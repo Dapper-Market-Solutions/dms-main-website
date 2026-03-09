@@ -46,6 +46,20 @@ const CASE_STUDIES = [
     tags: ['SEO', 'Display Advertising', 'Lead Generation'],
   },
   {
+    client: 'Moke America — Virginia Beach',
+    industry: 'Golf Cart Dealership',
+    service: 'Fairway Sales System™ + Dapper ID™',
+    serviceColor: '#ffcb05',
+    headline: '5+ Sales in Month One. 1,000 Leads in the Pipeline.',
+    stats: [
+      { value: '5+', label: 'Sales Closed', period: 'in the first month' },
+      { value: '1,000', label: 'Leads Identified', period: 'via Dapper ID™' },
+      { value: '2', label: 'Products', period: 'Fairway + Dapper ID™' },
+    ],
+    summary: 'Moke America hit the ground running — closing 5+ sales in their very first month with the Fairway Sales System™. We then layered in Dapper ID™ and Dapper IQ™ to identify high-intent website visitors and build a targeted outbound pipeline, giving their sales team 1,000 warm leads ready for outreach.',
+    tags: ['Fairway Sales System™', 'Dapper ID™', 'Dapper IQ™', 'Outbound Outreach'],
+  },
+  {
     client: 'Golf Cart World',
     industry: 'Golf Cart Dealership',
     service: 'Fairway Sales System™',
@@ -119,7 +133,7 @@ export default function Results() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: '6+', label: 'Client Success Stories' },
+              { value: '7+', label: 'Client Success Stories' },
               { value: '300%+', label: 'Max Impression Growth' },
               { value: '2×', label: 'Sales Doubled (Med Supply)' },
               { value: '36', label: 'Quotes in 6 Weeks (Roofing)' },
