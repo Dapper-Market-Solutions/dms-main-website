@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import WebDesign from './pages/WebDesign'
 import Fairway from './pages/Fairway'
+import Results from './pages/Results'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -44,6 +45,7 @@ export default function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services/web-design" element={<WebDesign />} />
               <Route path="/services/fairwaysalessystem" element={<Fairway />} />
+              <Route path="/results" element={<Results />} />
             </Routes>
           </PageWrapper>
         </main>

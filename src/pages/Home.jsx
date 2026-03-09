@@ -2,6 +2,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Services from '../components/Services'
 import Stats from '../components/Stats'
+import SocialProof from '../components/SocialProof'
 import CTA from '../components/CTA'
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <Services />
       <Stats />
+      <SocialProof />
       <CTA />
     </>
   )

@@ -5,6 +5,7 @@ const NAV = [
   { label: 'About', href: '/about' },
   { label: 'Websites', href: '/services/web-design' },
   { label: 'Fairway Sales System™', href: '/services/fairwaysalessystem' },
+  { label: 'Results', href: '/results' },
   { label: 'Dapper IQ™', href: 'https://iq.dapperms.com', external: true },
   { label: 'Dapper ID™', href: 'https://id.dapperms.com', external: true },
 ]
