@@ -32,20 +32,6 @@ const CASE_STUDIES = [
     tags: ['Website Design', 'SEO', 'Dapper IQ™', 'Dapper ID™'],
   },
   {
-    client: 'EverNew Roofing',
-    industry: 'Roofing & Home Services',
-    service: 'SEO + Display Advertising',
-    serviceColor: '#00274c',
-    headline: '36 New Quotes in 6 Weeks',
-    stats: [
-      { value: '16K+', label: 'Monthly Impressions', period: 'in 5 months' },
-      { value: '2,600+', label: 'Users', period: 'reached per month' },
-      { value: '36', label: 'New Quotes', period: 'in just 6 weeks' },
-    ],
-    summary: 'EverNew Roofing launched with zero online presence. In 5 months we built them to 16,000+ monthly impressions and 2,600+ users. A targeted display campaign then generated 36 qualified quote requests in only 6 weeks — a strong foundation for long-term growth.',
-    tags: ['SEO', 'Display Advertising', 'Lead Generation'],
-  },
-  {
     client: 'Moke America — Virginia Beach',
     industry: 'Golf Cart Dealership',
     service: 'Dapper IQ™ + Dapper ID™',
@@ -86,20 +72,6 @@ const CASE_STUDIES = [
     ],
     summary: 'Golf Cart World came to us relying on seasonal foot traffic and hoping the phones would ring. The Fairway Sales System™ gave them a repeatable engine for attracting qualified buyers, nurturing them automatically, and closing deals consistently — even in the off-season.',
     tags: ['Fairway Sales System™', 'Lead Generation', 'Email Automation'],
-  },
-  {
-    client: 'Medical Supply Company',
-    industry: 'Medical Supply (14+ Locations)',
-    service: 'SEO',
-    serviceColor: '#00274c',
-    headline: '2× Sales Increase Across 14 Locations',
-    stats: [
-      { value: '2×', label: 'Sales Increase', period: 'company-wide' },
-      { value: '59%', label: 'More Traffic', period: 'in organic visits' },
-      { value: '14+', label: 'Locations', period: 'unified strategy' },
-    ],
-    summary: 'With 14+ locations and no cohesive digital strategy, this medical supply brand was leaving significant revenue on the table. We cut through the noise with a unified digital approach that doubled sales and drove 59% more qualified traffic across every location.',
-    tags: ['SEO'],
   },
   {
     client: 'Memory Lane Assisted Living',
@@ -147,10 +119,10 @@ export default function Results() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: '8+', label: 'Client Success Stories' },
+              { value: '6+', label: 'Client Success Stories' },
               { value: '300%+', label: 'Max Impression Growth' },
-              { value: '2×', label: 'Sales Doubled (Med Supply)' },
-              { value: '36', label: 'Quotes in 6 Weeks (Roofing)' },
+              { value: '1,000', label: 'Leads in One Week' },
+              { value: '2–5×', label: 'Lead Conversion Lift' },
             ].map((s, i) => (
               <div key={i}>
                 <div className="text-3xl font-extrabold" style={{ color: '#00274c' }}>{s.value}</div>
